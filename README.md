@@ -6,12 +6,12 @@ The supermarket has a catalog with different types of products (rice, apples, mi
 
 The supermarket runs special deals, e.g.
 
-Buy two toothbrushes, get one free. Normal toothbrush price is €0.99
-20% discount on apples, normal price €1.99 per kilo.
-10% discount on rice, normal price €2.49 per bag
-Five tubes of toothpaste for €7.49, normal price €1.79
-Two boxes of cherry tomatoes for €0.99, normal price €0.69 per box.
-These are just examples: the actual special deals change each week.
+- Buy two toothbrushes, get one free. Normal toothbrush price is €0.99
+- 20% discount on apples, normal price €1.99 per kilo.
+- 10% discount on rice, normal price €2.49 per bag
+- Five tubes of toothpaste for €7.49, normal price €1.79
+- Two boxes of cherry tomatoes for €0.99, normal price €0.69 per box.
+- These are just examples: the actual special deals change each week.
 
 Create some test cases and aim to get good enough code coverage that you feel confident to do some refactoring.
 
