@@ -11,7 +11,8 @@ The supermarket runs special deals, e.g.
 - 10% discount on rice, normal price €2.49 per bag
 - Five tubes of toothpaste for €7.49, normal price €1.79
 - Two boxes of cherry tomatoes for €0.99, normal price €0.69 per box.
-- These are just examples: the actual special deals change each week.
+
+These are just examples: the actual special deals change each week.
 
 Create some test cases and aim to get good enough code coverage that you feel confident to do some refactoring.
 
