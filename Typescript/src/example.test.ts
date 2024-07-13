@@ -15,6 +15,15 @@ describe("Supermarket", () => {
     const receipt = register.checkout();
     expect(receipt).toBe("Rice: £1.99/nTotal: £1.99");
   });
+
+  it("prints receipt with multiple items and prices, adding the total", () => {
+    const register = new Register();
+    register.addProduct("Rice", 1.99);
+    register.addProduct("Tomatoes", 0.99);
+    register.addProduct("Toothpaste", 1.79);
+    const receipt = register.checkout();
+    expect(receipt).toBe("Rice: £1.99/nTomatoes: £0.99/nToothpaste: £1.79/nTotal: £4.77");
+  });
 });
 
 class Register {
