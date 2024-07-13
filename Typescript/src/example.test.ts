@@ -1,4 +1,3 @@
-
 describe("Supermarket", () => {
   it("prints receipt with total 0 when shopping cart is empty", () => {
     //arrange
@@ -22,7 +21,17 @@ describe("Supermarket", () => {
     register.addProduct("Tomatoes", 0.99);
     register.addProduct("Toothpaste", 1.79);
     const receipt = register.checkout();
-    expect(receipt).toBe("Rice: £1.99/nTomatoes: £0.99/nToothpaste: £1.79/nTotal: £4.77");
+    expect(receipt).toBe(
+      "Rice: £1.99/nTomatoes: £0.99/nToothpaste: £1.79/nTotal: £4.77"
+    );
+  });
+
+  it("prints receipt with one item that has a 10% discount", () => {
+    const register = new Register();
+    register.addProduct("Rice", 1.99);
+    register.applyDiscount(1.99, 10);
+    const receipt = register.checkout();
+    expect(receipt).toBe("Rice: £1.79/nTotal: £1.79");
   });
 });
 
@@ -35,6 +44,13 @@ class Register {
 
   addProduct(product, price) {
     this.items.push({ product, price });
+  }
+
+  applyDiscount(productPrice: number, discount: number) {
+    const item = this.items.find((item) => item.price === productPrice);
+    if (item) {
+      item.price = parseFloat((productPrice - (productPrice * discount) / 100).toFixed(2));
+    }
   }
 
   checkout() {
